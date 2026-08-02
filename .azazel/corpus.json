@@ -1,0 +1,49 @@
+{
+  "name": "microzig",
+  "upstream": "ZigEmbeddedGroup/microzig",
+  "fork": "godofecht/microzig",
+  "branch": "azazel-zaza-integration",
+  "notes": "embedded workspace with many nested packages",
+  "status": "integration scaffold",
+  "preferred_zig": "0.16",
+  "baseline_command": [
+    "zig",
+    "build",
+    "--help"
+  ],
+  "build_zig": "0.16.0",
+  "build_command": [
+    "zig",
+    "build",
+    "--summary",
+    "all"
+  ],
+  "expected_build_classification": "dependency-fetch",
+  "azazel_command": [
+    "azazel",
+    "parity",
+    "--manifest",
+    ".azazel/parity.json"
+  ],
+  "expected_baseline_classification": "zig-toolchain",
+  "first_targets": [
+    "workspace packages",
+    "board ports",
+    "nested build packages",
+    "tools"
+  ],
+  "system_deps": [],
+  "required_tools": [],
+  "pkg_config_libs": [],
+  "replacement_gaps": [
+    "nested workspaces",
+    "dependency archive handling",
+    "embedded target slices"
+  ],
+  "integration_kind": "azazel",
+  "parity_status": "scaffold-only",
+  "executable_parity_status": "not-modeled",
+  "executable_parity_command": [],
+  "expected_executable_parity_classification": "not-modeled",
+  "executable_parity_targets": []
+}

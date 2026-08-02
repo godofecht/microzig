@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "repo": "microzig",
+  "baseline": {
+    "command": [
+      "zig",
+      "build",
+      "--help"
+    ],
+    "expected_classification": "zig-toolchain",
+    "preferred_zig": "0.16"
+  },
+  "build": {
+    "command": [
+      "zig",
+      "build",
+      "--summary",
+      "all"
+    ],
+    "zig": "0.16.0",
+    "expected_classification": "dependency-fetch"
+  },
+  "azazel": {
+    "command": [
+      "azazel",
+      "parity",
+      "--manifest",
+      ".azazel/parity.json"
+    ],
+    "status": "scaffold-only",
+    "first_targets": [
+      "workspace packages",
+      "board ports",
+      "nested build packages",
+      "tools"
+    ],
+    "system_deps": [],
+    "required_tools": [],
+    "pkg_config_libs": [],
+    "replacement_gaps": [
+      "nested workspaces",
+      "dependency archive handling",
+      "embedded target slices"
+    ],
+    "integration_kind": "azazel",
+    "executable_parity": {
+      "status": "not-modeled",
+      "command": [],
+      "expected_classification": "not-modeled",
+      "targets": [],
+      "workdir": ".azazel/parity-work"
+    }
+  }
+}
